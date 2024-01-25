@@ -52,7 +52,7 @@ body {
   background-color: var(--color-black);
   border-radius: 50%;
   position: absolute;
-  top: 20px;
+  top: 30px;
   left: 20px;
 }
 
@@ -66,14 +66,14 @@ body {
 }
 
 .antenna-left {
-  top: -20px;
+  top: -10px;
   left: 20px;
   z-index: -1;
   transform: rotateZ(-15deg);
 }
 
 .antenna-right {
-  top: -20px;
+  top: -10px;
   left: 35px;
 }
 
