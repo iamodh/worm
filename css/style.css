@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-light-green: #ace55a;
+  --color-green: #86dc3c;
+  --color-black: #301934;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  display: grid;
+}
+
+.head-container,
+.tail-container {
+  width: 10%;
+  height: 20vh;
+  grid-template-columns: 1fr;
+}
+
+.body-container {
+  width: 60%;
+  height: 20vh;
+  grid-template-columns: repeat(5, 1fr);
+  transition: all 1s linear;
+}
+
+.head,
+.tail {
+  margin: 4px;
+  background-color: tomato;
+}
+
+.head {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  position: relative;
+}
+
+.eye {
+  width: 12px;
+  height: 12px;
+  background-color: var(--color-black);
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.antenna-left,
+.antenna-right {
+  height: 32px;
+  width: 8px;
+  background-color: var(--color-black);
+  border-radius: 8px;
+  position: absolute;
+}
+
+.antenna-left {
+  top: -20px;
+  left: 20px;
+  z-index: -1;
+  transform: rotateZ(-15deg);
+}
+
+.antenna-right {
+  top: -20px;
+  left: 35px;
+}
+
+.tail {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.body {
+  background-color: tomato;
+  margin: 4px;
+}
+
+.head,
+.tail,
+.body {
+  background-color: var(--color-light-green);
+}
+
+.body:nth-child(odd) {
+  background-color: var(--color-green);
+}
